@@ -1,3 +1,8 @@
+/* code loc: 
+
+    https://github.com/yujiwu/CWA-processing/tree/main/STEAM
+    
+*/
 //任务1
 // 确定画面的大小
 //知识点：pixel 像素点的概念
