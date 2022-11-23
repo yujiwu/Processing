@@ -4,11 +4,12 @@
 */ 
 
 // Color Series: #F50000 #F5A400 #CB00F5 #00A9F5 #0022F5 (red to blue)
-int waveSpeed = 500;
+int waveSpeed = 100;
 float diagonal; // diagonal of the canvas
 float[] xPos, yPos; // arrays to store the x-y coordinate of each dot
 //int[] colorSeries = {#CB00F5, #F5A400, #F50000, #F5A400, #CB00F5, #00A9F5, #0022F5, #00A9F5};
 int[] colorSeries = {#3A6489, #5996C9, #74BFFF, #5996C9, #3A6489, #1E3548, #030608, #1E3548};
+boolean pause = false;
 
 void setup(){
     size(800,600);
@@ -50,4 +51,14 @@ void renderMolecule(){
 void colorSeries(){
     colorSeries = splice(colorSeries, colorSeries[colorSeries.length-1], 0);
     colorSeries = shorten(colorSeries);
+}
+
+void mouseClicked() {
+  if (pause){
+    loop();
+    pause = false;
+  }else {
+    noLoop();
+    pause = true;
+  }
 }
